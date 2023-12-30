@@ -1,0 +1,56 @@
+<!-- users to register -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script>
+        function validateForm() {
+
+            var email = document.register_form.email.value;
+            var password = document.register_form.password.value;
+            var c_password = document.register_form.c_password.value;
+            var dob = document.register_form.dob.value;
+            var country = document.getElementById('country').value;
+
+
+            // password validation
+            if (password != c_password) {
+                alert("Password and Confirm Password fields do not match.");
+                return false;
+            }
+
+
+
+        }
+    </script>
+
+</head>
+
+
+<body>
+    <form name="register_form" action="payment.html" onsubmit="return validateForm()" method="post">
+        <label for="email">Email</label> <input type="text" name="email" id="email" required><br><br>
+        <label for="password">Password</label> <input type="password" name="password" id="pass" required
+            placeholder="Must 6-10 characters"><br><br>
+        <label for="confirm password">Confirm Password</label> <input type="password" name="c_password" id="c_password"
+            required><br><br>
+        <!-- onchange="checkPassword()"-->
+        <label for="birth date">Date of Birth </label><input type="text" name="dob" id="dob" placeholder="Year/Month/Day"><br><br>
+        <label for="country">Country</label><br><br>
+        <select name="country" id="country">
+            <option value="nepal">Nepal</option>
+            <option value="india">India</option>
+        </select><br><br>
+        <label for="gender">Gender</label> <br><br>
+        <input type="radio" name="gender" id="" value="female">Female <br><br>
+        <input type="radio" name="gender" id="" value="male">Male <br><br>
+        <input type="radio" name="gender" id="" value="other">Other <br><br>
+        <input type="submit" value="Next">
+    </form>
+
+</body>
+
+</html>

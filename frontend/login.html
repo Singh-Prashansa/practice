@@ -1,0 +1,46 @@
+<!-- first page -->
+<!-- client and server validation -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script>
+        function validateForm() {
+            var email = document.login_form.email.value;    //document.form_name.name_in_input.value;
+            var password = document.login_form.password.value;
+
+            if (email == "") {
+                alert("Email field must be filled out");
+                return false;
+            }
+            else {
+                function_php();
+            }   
+            if (password == "") {
+                alert("Password field must be filled");
+                return false;
+            }
+            else {
+                function_php();
+            }
+
+        }
+        function function_php() {
+
+        }
+    </script>
+</head>
+
+<body>
+    <form action="homepage.html" method="post" onsubmit="return validateForm()" name="login_form">
+        <label for="email">Email</label> <input type="text" name="email" placeholder="username@email.com"><br><br>
+        <label for="password">Password</label> <input type="password" name="password"><br><br>
+        <input type="submit" name="" id=""><br><br>
+        <a href="register_form.html">Register</a>
+    </form>
+</body>
+
+</html>
