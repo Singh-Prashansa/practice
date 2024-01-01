@@ -1,4 +1,5 @@
 <!-- users to register -->
+<!-- need to validate password (space is allowed currrently) -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,26 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <script>
-        function validateForm() {
-
-            var email = document.register_form.email.value;
-            var password = document.register_form.password.value;
-            var c_password = document.register_form.c_password.value;
-            var dob = document.register_form.dob.value;
-            var country = document.getElementById('country').value;
-
-
-            // password validation
-            if (password != c_password) {
-                alert("Password and Confirm Password fields do not match.");
-                return false;
-            }
-
-
-
-        }
-    </script>
+    <script src="register.js"></script>
 
 </head>
 
@@ -34,13 +16,14 @@
     <form name="register_form" action="payment.html" onsubmit="return validateForm()" method="post">
         <label for="email">Email</label> <input type="text" name="email" id="email" required><br><br>
         <label for="password">Password</label> <input type="password" name="password" id="pass" required
-            placeholder="Must 6-10 characters"><br><br>
+            placeholder="Must 6-10 characters" minlength="6" maxlength="10"><br><br>
         <label for="confirm password">Confirm Password</label> <input type="password" name="c_password" id="c_password"
-            required><br><br>
-        <!-- onchange="checkPassword()"-->
-        <label for="birth date">Date of Birth </label><input type="text" name="dob" id="dob" placeholder="Year/Month/Day"><br><br>
+            required placeholder="Re-enter password" minlength="6" maxlength="10"><br><br>
+        <label for="birth date">Date of Birth </label><input type="date" name="dob" id="dob"
+            placeholder="Year/Month/Day"><br><br>
         <label for="country">Country</label><br><br>
         <select name="country" id="country">
+            <option value="Select your country">Select your country</option>
             <option value="nepal">Nepal</option>
             <option value="india">India</option>
         </select><br><br>

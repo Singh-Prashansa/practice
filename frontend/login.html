@@ -15,30 +15,22 @@
             if (email == "") {
                 alert("Email field must be filled out");
                 return false;
-            }
-            else {
-                function_php();
-            }   
+            }  
             if (password == "") {
                 alert("Password field must be filled");
                 return false;
             }
-            else {
-                function_php();
-            }
 
         }
-        function function_php() {
-
-        }
+        
     </script>
 </head>
 
 <body>
-    <form action="homepage.html" method="post" onsubmit="return validateForm()" name="login_form">
+    <form action="homepage.php" method="post" onsubmit="return validateForm()" name="login_form">
         <label for="email">Email</label> <input type="text" name="email" placeholder="username@email.com"><br><br>
         <label for="password">Password</label> <input type="password" name="password"><br><br>
-        <input type="submit" name="" id=""><br><br>
+        <input type="submit" name="" id="" value="Login"><br><br>
         <a href="register_form.html">Register</a>
     </form>
 </body>

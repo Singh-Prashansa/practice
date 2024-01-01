@@ -1,14 +1,15 @@
 <?php
 include("connection.php");
 
-$id=$_POST['id'];
+$id=$_POST['id'];   //$_POST[name];
 $title=$_POST['title'];
 $description=$_POST['description'];
-$genre=$_POST['genre'];
 $year=$_POST['year'];
+$genre=$_POST['genre'];
 $rating=$_POST['rating'];
 
-$q="INSERT INTO `list_of_movies` VALUES ('$id','$title','$description','$genre','$year',$rating)";
+
+$q="INSERT INTO `list_of_movies` VALUES ($id,'$title','$description','$year','$genre',$rating)";
 
 // move_uploaded_file($_FILES['photo'],['tmp_name'],"images/$photo");
 // moving files to server folder

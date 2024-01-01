@@ -10,9 +10,11 @@
 </head>
 
 <body>
-    <form action="add_movie.php" method="get" name="about_movie">
+    <form action="add_movie.php" method="post" name="about_movie">
+        <label for="id">ID</label>
+        <input type="number" name="id" id="id"><br><br>
         <label for="">Movie Title</label>
-        <input type="text" id="movie_title" name="movie_title"><br><br>
+        <input type="text" id="title" name="title"><br><br>
         <label for="">Description</label>
         <textarea name="description" id="description" cols="30" rows="10"></textarea><br><br>
         <label for="">Year</label>
