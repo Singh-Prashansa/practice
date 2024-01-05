@@ -2,7 +2,7 @@
 <?php
 include('connection.php');
 
-$id=$_GET['id'];
+$id=$_POST['id'];
 $q="select * from list_of_movies where  `id`=$id";
 
 
@@ -32,7 +32,7 @@ $data=mysqli_fetch_array($result,MYSQLI_ASSOC);
 
 <body>
 
-    <form method="post" action="updated.php" enctype="multipart/form-data">
+    <form method="post" action="edited.php" enctype="multipart/form-data">
         <input type="hidden" name='id' value="<?php echo $data['id'];?>">
         <!-- key=column name , value =coulumn value -->
 
